@@ -4,7 +4,7 @@ const fetchNotes = async (req, res) => {
     // encontrar las notas
     const notes = await Note.find();
     // responder la petición con ellas
-    res.json({ notes: notes })
+    res.json({ notes })
 }
 
 const fetchNote = async (req, res) => {
@@ -22,8 +22,8 @@ const fetchNote = async (req, res) => {
 
 const createNote = async (req, res) => {
     // obtener los datos enviados de la solicitud
-    const title = req.body.title;
-    const body = req.body.body;
+    const {title, body} = req.body;
+    
     // crear una nota con ellos
     const note = await Note.create({
         title: title, // se ponen los nombres de los parametros, para después mandarlos a la base de datos
