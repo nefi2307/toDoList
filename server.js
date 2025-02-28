@@ -20,7 +20,7 @@ connectToDb()
 
 // crear las rutas (post, get, etc) ----------- de ruta ----------
 //app.get('/', (req, res) => {
-  //  res.json({ hello: 'alexis te cocho?'})
+  //  res.json({ hello: 'alexis'})
 //})
 
 // --------------- RUTAS ------------------------------------ \\
