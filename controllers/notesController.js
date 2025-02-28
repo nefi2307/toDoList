@@ -63,16 +63,15 @@ const deleteNote = async (req, res) => {
     const note = await Note.findByIdAndDelete(notaId)
     if (note) {
         res.json({ success: "Nota eliminada" })
-    }
-    else {
+    }    
         res.json({ error: "Intentelo de nuevo" })
-    }
+    
 }
 
 module.exports = {
-    fetchNotes: fetchNotes,
-    fetchNote: fetchNotes,
-    createNote: createNote,
-    updateNote: updateNote,
-    deleteNote: deleteNote
+    fetchNotes,
+    fetchNote,
+    createNote,
+    updateNote,
+    deleteNote
 }
